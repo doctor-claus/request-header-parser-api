@@ -1,8 +1,9 @@
 var express = require('express');
+var cors = require('cors');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/browserinfo', function(req, res, next) {
+router.get('/browserinfo', cors(), function(req, res, next) {
   var software = req.headers["user-agent"].split(/[\(\)]/)[1];
   software = software.trim();
   var ip = req.headers["X-Forwarded-For"]
