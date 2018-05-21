@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#cont{
+  background-color: lightgray;
 }
-
-a {
-  color: #00B7FF;
+.info{
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 15px;
+  font-family: 'Lucida Console', sans-serif;
+}
+#con{
+  margin: 15% auto;
+  font-family: 'BenchNine', sans-serif;
+}
+.info1{
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 15px;
+  font-family: 'Lucida Console', sans-serif;
 }
