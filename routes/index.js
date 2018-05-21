@@ -8,8 +8,9 @@ router.get('/', function(req, res, next) {
   var ip = req.headers["X-Forwarded-For"]
   || req.headers["x-forwarded-for"]
   || req.client.remoteAddress;
-  res.setHeader('Content-Type', 'text/plain');
-  res.send(ip);
+  var obj = { ip: ip, software: software };
+  res.setHeader('Content-Type', 'application/json');
+  res.json(obj);
 });
 
 module.exports = router;
