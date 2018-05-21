@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
   var ip = req.headers["X-Forwarded-For"]
   || req.headers["x-forwarded-for"]
   || req.client.remoteAddress;
-  var obj = { ip: ip, software: software };
+  var language = req.headers["accept-language"].split(",")[1].split(";")[0].trim();
+  var obj = { ip: ip, language: language, software: software };
   res.setHeader('Content-Type', 'application/json');
   res.json(obj);
 });
